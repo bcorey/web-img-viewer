@@ -1,0 +1,52 @@
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(245, 245, 245);
+        color: #041C32;
+    }
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #041C32;
+        color: rgb(235, 235, 235);
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    width:500px;
+}
+
+canvas {
+    width: 1000px;
+    height: 200px;
+    width: inherit;
+    background-color: #04293A;
+    border-radius: 0rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.column {
+    margin-top: 10px;
+}
