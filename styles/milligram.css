@@ -15,12 +15,12 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --fg: rgb(245, 245, 245);
-        --bg: #041C32;
+        --bg: #000;
     }
 }
 
 :root {
-  --highlight: #ECB365;
+  --highlight: #c9c9c9;
 }
  
   
@@ -64,7 +64,7 @@
    background-color: var(--fg);
    color: var(--bg);
    border: 0.1rem solid var(--fg);
-   border-radius: 20rem;
+   border-radius: 0rem;
    cursor: pointer;
    display: inline-block;
    font-size: 1.1rem;
