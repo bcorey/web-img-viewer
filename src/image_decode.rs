@@ -1,6 +1,5 @@
 use js_sys::Uint8Array;
 use wasm_bindgen::JsCast;
-use image::DynamicImage;
 use web_sys::File;
 
 pub fn get_file(id: &str) -> Option<File> {
@@ -26,24 +25,6 @@ pub fn get_file(id: &str) -> Option<File> {
         None => return None
     };
      
-}
-
-pub async fn manual_decode(file: File) -> Option<WebImage> {
-    let file_array_buffer = file.array_buffer();
-    let future_data = wasm_bindgen_futures::JsFuture::from(file_array_buffer).await.unwrap();
-    let array_buffer = future_data.dyn_into::<js_sys::ArrayBuffer>().unwrap();
-    let out = Uint8Array::new_with_byte_offset_and_length(
-        &array_buffer,
-        0,
-        array_buffer.byte_length()
-    ).to_vec();
-    let here_we_go = &out[..];
-    let diffuse_image = image::load_from_memory(here_we_go).unwrap();
-    Some(WebImage {
-        width: diffuse_image.width(),
-        height: diffuse_image.height(),
-        data: diffuse_image.to_rgba8().to_vec()
-    })
 }
 
 

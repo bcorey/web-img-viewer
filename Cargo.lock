@@ -505,13 +505,13 @@ version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "211119e0c96d2d0221ce1886b94aed18c41f7f9ccb23d0dc80fff5e919b2a1a2"
 dependencies = [
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-core",
  "dioxus-core-macro",
  "dioxus-hooks",
  "dioxus-html",
  "dioxus-router",
  "dioxus-web",
- "fermi 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "fermi",
 ]
 
 [[package]]
@@ -519,24 +519,6 @@ name = "dioxus-core"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50fd75cb8f4752b122e3935eaa65b4c8c5c61dac2a305cb3d4c3422a01e0aee2"
-dependencies = [
- "backtrace",
- "bumpalo",
- "futures-channel",
- "futures-util",
- "fxhash",
- "indexmap",
- "log",
- "longest-increasing-subsequence",
- "once_cell",
- "slab",
- "smallvec",
-]
-
-[[package]]
-name = "dioxus-core"
-version = "0.2.1"
-source = "git+https://github.com/dioxuslabs/dioxus#28fba42e7e8ed9ceddc8024860cfa3b0d7a80cf3"
 dependencies = [
  "backtrace",
  "bumpalo",
@@ -568,9 +550,7 @@ name = "dioxus-demo"
 version = "0.1.0"
 dependencies = [
  "dioxus",
- "fermi 0.2.1 (git+https://github.com/dioxuslabs/dioxus)",
  "futures",
- "image",
  "img-render",
  "js-sys",
  "log",
@@ -588,7 +568,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "51ffbb5b87c3bcd32a5629b5bd7921b7a7c685eded345c32100574b4a4df7872"
 dependencies = [
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-core",
  "futures-channel",
  "log",
 ]
@@ -599,7 +579,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c42fe33f30303e9acb0404e9c9aa61535ab50ad9e84f4809543881ee6a2b5abc"
 dependencies = [
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-core",
  "wasm-bindgen",
  "web-sys",
 ]
@@ -621,7 +601,7 @@ version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d87ba54351495b657c291831de8f259be9616047f9e9826757788a43d3d2907"
 dependencies = [
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-core",
  "dioxus-core-macro",
  "dioxus-html",
  "futures-channel",
@@ -645,7 +625,7 @@ checksum = "61399ab0ebd255e3ad58c46cebc2a2db5d69a22af80bca68fe0a9aaf6480058f"
 dependencies = [
  "anyhow",
  "console_error_panic_hook",
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-core",
  "dioxus-html",
  "dioxus-interpreter-js",
  "futures-channel",
@@ -766,17 +746,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aa3c170a3972c362a46622d09946b69c976c39832e24024c8efabe6073f8b995"
 dependencies = [
- "dioxus-core 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "im-rc",
- "log",
-]
-
-[[package]]
-name = "fermi"
-version = "0.2.1"
-source = "git+https://github.com/dioxuslabs/dioxus#28fba42e7e8ed9ceddc8024860cfa3b0d7a80cf3"
-dependencies = [
- "dioxus-core 0.2.1 (git+https://github.com/dioxuslabs/dioxus)",
+ "dioxus-core",
  "im-rc",
  "log",
 ]
@@ -1243,9 +1213,9 @@ dependencies = [
 
 [[package]]
 name = "itoa"
-version = "1.0.3"
+version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c8af84674fe1f223a982c933a0ee1086ac4d4052aa0fb8060c12c6ad838e754"
+checksum = "4217ad341ebadf8d8e724e264f13e593e0648f5b3e94b3896a5df283be015ecc"
 
 [[package]]
 name = "jni-sys"
@@ -1999,9 +1969,9 @@ dependencies = [
 
 [[package]]
 name = "serde-wasm-bindgen"
-version = "0.4.3"
+version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1cfc62771e7b829b517cb213419236475f434fb480eddd76112ae182d274434a"
+checksum = "e3b4c031cd0d9014307d82b8abf653c0290fbdaeb4c02d00c63cf52f728628bf"
 dependencies = [
  "js-sys",
  "serde",
