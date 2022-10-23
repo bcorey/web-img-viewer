@@ -34,7 +34,7 @@ use web_sys::CanvasRenderingContext2d;
 use web_sys::ImageBitmap;
 use web_sys::HtmlImageElement;
 
-use img_render::WebImage;
+use crate::render_pipeline::WebImage;
 use wasm_logger;
 
 

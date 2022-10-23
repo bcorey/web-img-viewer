@@ -5,9 +5,9 @@ use std::hash::Hash;
 use dioxus::prelude::*;
 use dioxus::events::{MouseEvent, FormEvent, PointerData};
 use dioxus::core::UiEvent;
-use img_render::run;
-use img_render::WebImage;
-use img_render::FrontendEvent;
+//use img_render::run;
+//use img_render::WebImage;
+//use img_render::FrontendEvent;
 use winit::event_loop::{EventLoopProxy};
 // use image::DynamicImage;
 
@@ -19,6 +19,9 @@ use image_decode::{get_file, canvas_decode, save_canvas};
 
 mod color_management;
 use color_management::*;
+
+mod render_pipeline;
+use render_pipeline::{run, WebImage, FrontendEvent};
 
 #[allow(non_snake_case)]
 
@@ -106,7 +109,13 @@ fn app(cx: Scope) -> Element {
     let proxy = use_read(&cx, PROXY);
 
     log::info!("updating ui");
-    start(cx);  
+    start(cx);
+
+    let colors = use_state(&cx, || color_management::ColorList::new());
+    //let n = colors.make_mut().next_color();
+    let mut colors_index: &UseState<usize> = use_state(&cx, || 0);
+    let active_color = colors.get_color(*colors_index.current());
+    
 
     // Position on the square where drag was started
     // If we are not currently dragging, `None`
@@ -204,7 +213,7 @@ fn app(cx: Scope) -> Element {
                         class: "button-column",
                         VoteButton {
                             name: "+",
-                            onclick: move |_| set_value(value + 1),
+                            onclick: move |_| colors_index += 1,
                         }
                     }
                     div {
@@ -214,15 +223,15 @@ fn app(cx: Scope) -> Element {
                         class: "button-column",
                         VoteButton {
                             name: "-",
-                            onclick: move |_| set_value(value - 1),
+                            onclick: move |_| colors_index -= 1,
                         }
                     }
                 }
                 div {
                     style: "display: table; width: 100%",
                     h6 { 
-                        style: "display: table-cell; vertical-align: middle; width: 100%; text-align: center; height: 3.8rem",
-                        "{value}" 
+                        style: "display: table-cell; vertical-align: middle; width: 100%; text-align: center; height: 3.8rem; background-color: {active_color.accent}",
+                        "{colors_index}" 
                     }
                 }
                 div {
