@@ -1,10 +1,6 @@
 # web-img-viewer
-
-![image](https://user-images.githubusercontent.com/15741996/196278910-084ceff0-2cc9-428a-ac2f-129160d8bf5b.png)
-![img-viewer screenshot 6](https://user-images.githubusercontent.com/15741996/196280357-17a98842-0638-4f7f-b897-d02cc8960465.png)
-![img-viewer screenshot 2](https://user-images.githubusercontent.com/15741996/196280366-0b3f2143-cc15-4a74-995b-8d214d7e8744.png)
-![img-viewer screenshot 7](https://user-images.githubusercontent.com/15741996/196280375-4c320f63-cfb2-4ac4-a05a-4b0805196e42.png)
-![Screen Shot 2022-10-17 at 16 48 47](https://user-images.githubusercontent.com/15741996/196280408-806eca5e-ac80-4346-ae63-d305c3602eeb.png)
+![Screenshot 2022-10-22 221040](https://user-images.githubusercontent.com/15741996/197372139-dd717637-0614-46ba-8598-110f2b0a7c95.png)
+![Screen Shot 2022-10-22 at 20 29 37](https://user-images.githubusercontent.com/15741996/197372168-2dd5957d-80f3-4eb9-b5ef-ef173e73bba8.png)
 
 # functionality
 Web-based image effect UI that seeks to use the UI as a compositional element in the image.
